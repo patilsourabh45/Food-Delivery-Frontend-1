@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
                         <input type="password" placeholder="Enter Password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}  className="form-control" id="exampleInputPassword1" required />
                     </div>
                     
-                    <button type="submit" onClick={() => this.props.signup(this.state.name, this.state.phonenumber, this.state.email, this.state.password)} className="btn btn-primary">Signup</button>
+                    <button type="submit" onClick={() => this.props.signup(this.state.name, this.state.email, this.state.phonenumber, this.state.password)} className="btn btn-primary">Signup</button>
                 </form>
             </div>
 

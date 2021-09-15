@@ -22,10 +22,10 @@ class SignupComponent extends React.Component {
     }
   }
 
-  createSignup(name, phonenumber, email, password) {
+  createSignup(name, email, phonenumber, password) {
     console.log(`Email = ${email} and password=${password}`);
     this.setState({ state: AvailableStates.LOADING });
-    signupApi(name, phonenumber, email, password)
+    signupApi(name,  email, phonenumber, password)
       .then(response => {
         console.log(JSON.stringify(response));
         if (response.status === 200) {
@@ -49,7 +49,7 @@ class SignupComponent extends React.Component {
         {
           state === AvailableStates.NEW &&
           (
-            <SignupForm signup={(name, phonenumber, email, password) => this.createSignup(name, phonenumber, email, password)} />
+            <SignupForm signup={(name, email, phonenumber, password) => this.createSignup(name, email, phonenumber, password)} />
           )
         }
         {
