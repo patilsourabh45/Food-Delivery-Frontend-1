@@ -7,8 +7,8 @@ function signupApi(name, email, phonenumber,  password) {
   return axios.post(`${BACKEND_URL}/signup`, {},{
     params: {
       name:name,
-      phonenumber:phonenumber,
       email: email,
+      phonenumber:phonenumber,
       password: password
     }
   });
